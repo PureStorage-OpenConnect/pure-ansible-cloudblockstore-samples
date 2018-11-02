@@ -1,0 +1,1 @@
+# pure-ansible-cloudblockstore-samples
