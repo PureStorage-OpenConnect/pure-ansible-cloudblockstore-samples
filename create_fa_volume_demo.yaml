@@ -1,0 +1,10 @@
+- name: Pure Storage storage module examples
+  hosts: local aws
+  gather_facts: no
+  tasks:
+  - name: Create new chocolate-croissant volume 
+    purefa_volume: 
+      name: "chocolate-croissant"
+      size: "300G"
+      fa_url: "{{flasharray_url}}"
+      api_token: "{{flasharray_api_token}}"

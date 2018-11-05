@@ -1,0 +1,11 @@
+- name: Pure Storage storage module examples
+  hosts: local aws
+  gather_facts: no
+  tasks:
+  - name: Delete the chocolate-croissant volume 
+    purefa_volume: 
+      name: "chocolate-croissant"
+      state: absent
+      eradicate: true
+      fa_url: "{{flasharray_url}}"
+      api_token: "{{flasharray_api_token}}"
